@@ -1,0 +1,41 @@
+# AEGIS — проект лицензии / draft license
+
+**RU.** Это проект лицензии AEGIS для открытого обсуждения и независимой проверки. До выпуска по положению В-6 он как лицензия не действует (О-2). Русский и английский тексты равно авторитетны (K-0.11). Текст и приложения подготовлены с помощью ИИ по решениям и под контролем владельца проекта.
+
+**EN.** This is the draft AEGIS License for open discussion and independent review. Until release under provision B-6 it does not operate as a license (F-2). The Russian and English texts are equally authoritative (K-0.11). The text and appendices were prepared with the help of AI, according to the decisions and under the control of the project owner.
+
+## Состав / Contents
+
+| Файл / File | Что это / What it is |
+|---|---|
+| `AEGIS_License_RU.md`, `AEGIS_License_EN.md` | текст лицензии: ядро, изменяемая часть, приложения, пояснение простым языком / the License text |
+| `AEGIS_приложение_*.py` | приложения А–З: модели, доказательства, эталонная реализация / Appendices A–H |
+| `AEGIS_CORE_прослеживаемость.csv`, `AEGIS_стресс_тесты_повторно.csv`, `AEGIS_допущения_моделей.csv` | прослеживаемость требований, стресс-тесты, допущения моделей / traceability, stress tests, model assumptions |
+| `AEGIS_призыв_к_независимой_проверке.md` | как проверить и сообщить о находке / call for independent review |
+| `CORE-ID.txt` | полный идентификатор ядра (SHA-512 + SHA3-512) / full Core identifier |
+| `SHA512SUMS`, `SHA3-512SUMS` | манифест всех файлов / manifest of all files |
+| `*.asc`, `*.mldsa65.sig`, `*.ots`, `keys/` | подписи, отметки времени, открытые ключи / signatures, timestamps, public keys |
+| `tools/` | проверка пакета, манифест, постквантовая подпись / package check, manifest, post-quantum signature |
+
+## Проверка / Verification
+
+```
+sha512sum -c SHA512SUMS                                   # хеши файлов / file hashes
+python3 -I tools/manifest.py check                        # SHA-512 + SHA3-512 и идентификатор ядра
+gpg --import keys/aegis-public-key.asc                    # ключ 915E 38B7 2359 8D21 CCC3 BA20 8286 646F ED17 D439
+gpg --verify SHA512SUMS.asc SHA512SUMS
+gpg --verify SHA3-512SUMS.asc SHA3-512SUMS
+python3 tools/pq_sign.py verify keys/aegis_mldsa65.pub SHA512SUMS SHA3-512SUMS
+ots verify SHA512SUMS.ots                                 # отметка времени / timestamp
+python3 -I tools/check_all.py                             # все модели, Z3, испытания / all models, Z3, tests
+```
+
+Для `check_all.py` нужны `numpy`, `scipy`, `z3-solver`, `cryptography` (с ML-DSA). / `check_all.py` needs `numpy`, `scipy`, `z3-solver`, `cryptography` (with ML-DSA).
+
+Отпечаток ключа OpenPGP сверяйте не только по этому файлу, но и по другим независимым источникам: тем же ключом подписан коммит cc3027b публикации v0.1. / Check the OpenPGP fingerprint against independent sources too, not only this file: the same key signed commit cc3027b of the v0.1 publication.
+
+Подпись подтверждает, что файлы опубликованы владельцем этих ключей, а отметка времени — что они существовали не позже отмеченного момента. Ни то ни другое не подтверждает правильность содержания (В-7, K-10). / A signature confirms that the files were published by the holder of these keys, and a timestamp that they existed no later than the stamped moment. Neither confirms that the content is correct (B-7, K-10).
+
+## Предварительные материалы v0.1 / Preliminary materials v0.1
+
+Пакет AEGIS v0.1 (21.10.2026) — предварительные материалы, а не лицензия (О-7). / The AEGIS v0.1 package (21.10.2026) consists of preliminary materials, not a license (F-7).
