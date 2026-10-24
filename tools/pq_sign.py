@@ -12,6 +12,11 @@ AEGIS — постквантовая подпись файлов (ML-DSA-65, FIP
   python3 tools/pq_sign.py verify keys/aegis_mldsa65.pub    SHA512SUMS SHA3-512SUMS
 
 sign пишет рядом с каждым файлом <файл>.mldsa65.sig; verify проверяет их.
+
+EN: post-quantum file signature (ML-DSA-65, FIPS 204), a second signature next to the classical one (B-1, F-2).
+The private key is created and kept only on the publisher's computer, encrypted with a password, outside the
+repository; only the public key goes into the repository. Commands: keygen, sign, verify (see above);
+sign writes <file>.mldsa65.sig next to each file; verify checks them.
 """
 import getpass, os, sys
 

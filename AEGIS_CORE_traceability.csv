@@ -1,0 +1,158 @@
+﻿CORE,"Essence (paraphrase, not a quotation)",Provisions of the current text,Status,Gap or note
+CORE-01,The text and normative meaning of the Core are immutable,"K-0.2, K-0.4",in text,
+CORE-02,The Core does not change; an uncorrectable error — only a separate version,"K-0.2, K-0.3",in text,
+CORE-03,Authenticity — by the original reference and independent evidence,"B-7, B-4, L-10",in text,
+CORE-04,Restoration of trust is predefined and does not change the Core,"B-11, E-8",in text,
+CORE-05,Several independent reviews without a monopoly on interpretation,"K-0.6, Section 7",in text,
+CORE-06,Lines that cannot be crossed; minimization of harm; the conflict is recorded,"K-0.14, K-0.5",in text,
+CORE-07,"Hierarchy K→L→R and layers V, G",Parts I–III; heading of Part II,in text,fixed during reconciliation with the GPT history export
+CORE-08,The reference and derived versions are distinguishable; a fork is not the original,"K-0.3, K-3, L-10",in text,
+CORE-09,Every guarantee is limited by evidence and uncertainty,"K-10, C-6",in text,
+CORE-10,The Core is a closed list with identifiers,"K-0.1, K numbers, B-7",in text,
+CORE-11,Open disagreement without a single arbiter; disputed conformity is undetermined,"K-0.6, K-0.7, P-7",in text,
+CORE-12,An emergency does not cancel prohibitions; protective measures within limits,"K-13, E-6",in text,
+CORE-13,The reference is a manifest of files with roles and hashes,B-7 (manifest),in text,fixed during reconciliation with the GPT history export
+CORE-14,Multi-party key recovery; an old signature is not enough,"B-11, B-4",in text,
+CORE-15,"Statuses: reference, confirmed, claimed, undetermined, non-conformity, derivative with a changed Core","P-7, C-2, C-5; C-7",in text,fixed during reconciliation with the GPT history export
+CORE-16,"Nine sections of K (rights, immutability, circumvention, reference, honesty, interpretation, disputes, recovery, verifiability)","K-0.1…K-0.14, K-1…K-26",in text,Content covered; division differs
+CORE-17,"Guarantees on all layers (language, OS, AI); no emergency exceptions","K-0.8, K-9, K-13",in text,
+CORE-18,"Extended list of prohibitions: secrets, integrity, privacy, authority, AI, honesty, hidden rules, suppression of challenge, abuse of recovery, concealment of conflicts","K-5, K-6, K-7, K-8, K-9, K-10, K-11, K-2, K-13",in text,
+CORE-19,"Action, effect and intent are assessed separately",K-0.7; P-4,in text,fixed during reconciliation with the GPT history export
+CORE-20,"Separate standards for authenticity, conformity, violation, harm, intent","K-0.7, def. 14; P-4, C-7",in text,fixed during reconciliation with the GPT history export
+CORE-21,Distributed burden of proof; whoever controls evidence does not conceal it,"K-0.7, C-5",in text,
+CORE-22,Multi-level verifiability while protecting Secrets,"P-6, def. 15",in text,
+CORE-23,Distributed independence; criteria in advance; conflicts disclosed,"P-4, P-17, U-5",in text,
+CORE-24,Open disagreement; statuses by area,P-7,in text,
+CORE-25,Reconsideration on material grounds; refusal justified and recorded,"P-11, P-16; P-11",in text,fixed during reconciliation with the GPT history export
+CORE-26,The history of assessments is immutable; the current status is separate,"K-11, P-13",in text,
+CORE-27,Contradictions between assessments are visible,"P-7, K-11",in text,
+CORE-28,Verifiable independence; replacement of a reviewer by procedure,"P-17, P-12, P-3c",in text,
+CORE-29,Compromise of a reviewer: analysis of consequences without mass annulment,P-3c,in text,fixed during reconciliation with the GPT history export
+CORE-30,"Materiality of risk: severity, scale, probability, reversibility, rights affected; an average score does not hide a critical risk",def. 19; E-1,in text,fixed during reconciliation with the GPT history export
+CORE-31,Precaution given substantiated signs of critical risk,"P-8, E-1",in text,
+CORE-32,Local measures quickly; system-wide — with independent confirmation,E-5,in text,fixed during reconciliation with the GPT history export
+CORE-33,Disagreement about a measure is recorded; expansion — with confirmation,"E-3, E-7",in text,
+CORE-34,Term of a measure; extension with new grounds; safe transition,"E-3, E-4, B-10",in text,
+CORE-35,End of a measure ≠ restored security,E-8,in text,
+CORE-36,Isolation of an unverified component,—,technical layer,Technical layer
+CORE-37,Multi-level verification of backups,—,technical layer,Technical layer
+CORE-38,No copy is trusted without evidence,—,technical layer,Technical layer
+CORE-39,The history of evidence is protected against unnoticed substitution,"K-6, P-13, B-4; P-13",in text,fixed during reconciliation with the GPT history export
+CORE-40,"Conflicting sources: keep both versions, without priority","K-6, K-11",in text,
+CORE-41,Independence — by actual dependencies,"def. 21, B-3",in text,
+CORE-42,Evidence retention periods are defined; minimization,"K-7, P-13; P-13",in text,fixed during reconciliation with the GPT history export
+CORE-43,"Deletion of evidence — on grounds, with a record; metadata without Secrets","K-6, P-13",in text,
+CORE-44,Loss of evidence is recorded; the status is lowered,K-0.7,in text,
+CORE-45,Conflict between restored copies,—,technical layer,Technical layer
+CORE-46,Recovery is complete under published criteria,E-8,in text,
+CORE-47,The operator restores; status by criteria; critical — independently,E-8,in text,
+CORE-48,Without independent review — only a limited reversible mode,"E-1, E-5",in text,
+CORE-49,Non-conformity of a component: proportionate isolation,—,technical layer,Technical layer
+CORE-50,Return of a component after a violation — by criteria,—,technical layer,Technical layer
+CORE-51,Repetition is a risk factor,P-18,in text,fixed during reconciliation with the GPT history export
+CORE-52,Loss of admission of a component by criteria,—,technical layer,Technical layer
+CORE-53,The person responsible suspends admission within their competence,E-5,in text,fixed during reconciliation with the GPT history export
+CORE-54,Withdrawal of admission is not an instrument of pressure,"K-13, P-9",in text,
+CORE-55,Disagreement of reviewers: both assessments are preserved,P-7,in text,
+CORE-56,A long dispute: time does not prove one right; measures are not indefinite,"P-14, E-4",in text,
+CORE-57,"A new assessment — as a separate record, history preserved","K-11, P-16",in text,
+CORE-58,"Each assessment: identifier, link to the previous record, hash",P-13,in text,fixed during reconciliation with the GPT history export
+CORE-59,A break in history is recorded,"K-6, K-11",in text,
+CORE-60,An audit is complete only after decisions are reconciled with the text,B-6,in text,fixed during reconciliation with the GPT history export
+CORE-61,Traceability matrix,this file,method,
+CORE-62,Six categories of audit issues,review reports,method,
+CORE-63,An issue is closed by re-verification; the author of a fix does not close it alone,"E-8, T-9",in text,
+CORE-64,An unresolvable issue remains open,K-10,in text,
+CORE-65,Two-way completeness: CORE → text and text → basis,this file; references in brackets of each provision,method,
+CORE-66,Classification of the normative function of provisions,—,method,Done during independent review
+CORE-67,Separate check of legal certainty,"B-6, J-1 (author's decision: independence from the law of states)",in text,fixed during reconciliation with the GPT history export
+CORE-68,AEGIS is self-standing and does not absorb other licenses,L-8,in text,L-8 permits only code under licenses that allow everything to be distributed under AEGIS
+CORE-69,Assessment of a third-party license is a separate verifiable assessment,L-8,in text,
+CORE-70,Anyone may publish an assessment; official status — by procedure,C-5; C-7,in text,fixed during reconciliation with the GPT history export
+CORE-71,Signs of an official assessment,C-7,in text,fixed during reconciliation with the GPT history export
+CORE-72,"An error in an official assessment — a corrected assessment, history preserved","P-16, K-11",in text,
+CORE-73,The procedure does not exempt itself from review,"K-0.6, P-16",in text,
+CORE-74,"Incomplete criteria: versions, no retroactive effect","K-11, P-4, J-10",in text,
+CORE-75,Conflicts of interest in developing criteria,"U-5, R-5",in text,
+CORE-76,Disagreement about criteria is not decided by a vote,K-17,in text,
+CORE-77,A dispute is closed only under conditions,"P-7, P-11",in text,
+CORE-78,Ambiguity of criteria — a verifiable clarification,"K-0.11, R-1",in text,
+CORE-79,The history of changes to criteria is verifiable,K-11,in text,
+CORE-80,A loophole does not permit what is prohibited,K-0.5,in text,
+CORE-81,Scrupulous search for contradictions before publication,"appendices, check_all",method,
+CORE-82,Multi-level consistency check,"Z3, stress tests",method,
+CORE-83,The Core is untouchable; dissenters — a branch without the AEGIS name,"K-0.2, K-0.3",in text,
+CORE-84,Immutability — of the text and the meaning,"K-0.2, B-7",in text,
+CORE-85,"Only proven arguments, but without eternal dogma","K-10, appendices; C-6",in text,fixed during reconciliation with the GPT history export
+CORE-86,A proven error ≠ a supposition,K-10,in text,
+CORE-87,Link between a model and the real system,Part III,in text,
+CORE-88,Never claim full security,"K-10, plain-language explanation",in text,
+CORE-89,A vulnerability that refutes a claim changes the assessment,"T-9, K-21",in text,
+CORE-90,Root-cause analysis after a fix,T-9,in text,
+CORE-91,After an architectural change conclusions are not carried over without justification,H-1; C-6,in text,fixed during reconciliation with the GPT history export
+CORE-92,Anyone may demand a full audit at any time,H-2; P-19,in text,fixed during reconciliation with the GPT history export
+CORE-93,"Registration of an audit request, timelines, public status",P-19,in text,fixed during reconciliation with the GPT history export
+CORE-94,Refusal of an audit can be challenged,P-19,in text,fixed during reconciliation with the GPT history export
+CORE-95,Conflicts of interest in a full audit,"U-5, P-17",in text,
+CORE-96,Access to evidence during an audit,P-6,in text,
+CORE-97,Refusal to provide evidence is recorded,K-0.7,in text,
+CORE-98,Completeness of an audit,—,method,
+CORE-99,Incompleteness of the list of requirements,—,method,
+CORE-100,Check of interactions between rules,"Z3, stress tests",method,
+CORE-101,Check of the consequences of every fix,check_all after every edit,method,
+CORE-102,Check of the real behaviour of the system; each CORE separately and together,"this file; T-4, T-5; Appendix H; B-6",partial,"The Trust System (B-1, B-2, B-4, B-7, B-10–B-12, P-13) has a reference implementation and has been tested: 27 attack tests, 13 of 13 rule mutations detected. Open justification: the behaviour of the compiler and runtime (T-1–T-10, C-1–C-7) can be checked only after they are created; they do not exist before release, so the requirement is met as the implementation appears"
+CORE-103,Criteria of sufficient completeness of an audit,—,method,
+CORE-104,"A prototype is not the reference; concept first, then reconciliation",—,method,Reconciliation is being done now
+CORE-105,"A new fundamental requirement: derive from K, a clarification, or a separate version","K-0.4, K-0.3",in text,
+CORE-106,A single standard for justifying a conclusion,C-6,in text,fixed during reconciliation with the GPT history export
+CORE-107,Search for hidden assumptions,table of assumptions,method,
+CORE-108,Analysis of external dependencies,T-6,in text,fixed during reconciliation with the GPT history export
+CORE-109,Check of the build and delivery chain,"T-3, T-4, T-5, B-4",in text,
+CORE-110,Insiders; separation of powers; independent review of changes,"U-8, B-8, P-3c",in text,
+CORE-111,Collusion; explicit limits of resilience,"Appendices B, F",in text,
+CORE-112,Separation of powers; decentralization; openness to the community,"K-8, K-23, U-8",in text,
+CORE-113,Free community assessments; statuses are not mixed,C-5; C-7,in text,fixed during reconciliation with the GPT history export
+CORE-114,AEGIS is everything and at the same time no one,"K-18, K-23, F-2; Preamble",in text,fixed during reconciliation with the GPT history export
+CORE-115,No monopoly on representation,"L-11, M-1, F-2",in text,
+CORE-116,Order of resolving disagreements; a vote does not override K,"K-17, R-1",in text,
+CORE-117,Protection against censorship; moderation under published rules,K-12; P-20,in text,fixed during reconciliation with the GPT history export
+CORE-118,Protection against capture through funding,"K-23, Section 16",in text,
+CORE-119,Ego Death and Ego Reborn,"B-11, E-8; S-3, S-4",in text,fixed during reconciliation with the GPT history export
+CORE-120,"What survives Ego Death: K, history, evidence","B-11, K-0.2, K-11",in text,
+CORE-121,The idea continues; authenticity is separate,"K-0.3, L-10",in text,
+CORE-122,Completion of Ego Reborn by criteria,"E-8, B-11",in text,
+CORE-123,Operation and history are assessed separately,E-8,in text,
+CORE-124,Protocols are protected against arbitrary application,K-13,in text,
+CORE-125,"Universum — a framework of transitions, not a supreme arbiter",S-5,in text,fixed during reconciliation with the GPT history export
+CORE-126,Freedom of development and honesty of identity,"K-0.3, K-3",in text,
+CORE-127,Several continuations — without automatic priority,"B-1 (t > n/2), B-11, L-10; C-7",in text,fixed during reconciliation with the GPT history export
+CORE-128,The name AEGIS does not make a system AEGIS,L-10,in text,
+CORE-129,"Psyche — a method of audit, not the Core",Section 7; S-6,in text,fixed during reconciliation with the GPT history export
+CORE-130,Psyche does not establish a final status alone,K-0.6,in text,
+CORE-131,Contradicting evidence is preserved,"K-6, P-7",in text,
+CORE-132,Reconsideration on material grounds,P-11,in text,
+CORE-133,Sufficiency of evidence by type of claim,C-6,in text,fixed during reconciliation with the GPT history export
+CORE-134,Eros — protection of the procedure of Psyche,"P-3c, P-17; S-6",in text,fixed during reconciliation with the GPT history export
+CORE-135,Ouroboros — the protector is not the judge of its own reliability,P-16; S-6,in text,fixed during reconciliation with the GPT history export
+CORE-136,No protocol prevails over others,K-0.6,in text,
+CORE-137,"Amor Fati, Memento Mori, Carpe Diem — a derived protocol",S-7,in text,fixed during reconciliation with the GPT history export
+CORE-138,The triad acts only within K,K-0.4,in text,
+CORE-139,Protection and review in parallel under critical risk,"E-1, E-5",in text,
+CORE-140,Each measure is assessed by its own consequences,E-6,in text,fixed during reconciliation with the GPT history export
+CORE-141,The initiator does not hold a measure indefinitely; extension — new grounds,"E-3, E-4",in text,
+CORE-142,Without a reviewer — minimal measures; absence does not extend,"E-5, P-12",in text,
+CORE-143,Repeated extensions — in-depth reconsideration,E-3,in text,fixed during reconciliation with the GPT history export
+CORE-144,Ouroboros is not an absolute arbiter,"P-16, K-0.6",in text,
+CORE-145,Conflicts of protocols — through K and criteria,K-0.14,in text,
+CORE-146,Philosophy does not prove a decision right,K-17,in text,
+CORE-147,Common sources of error; agreement does not equal independence,"def. 21, P-16",in text,
+CORE-148,Criteria are versioned,"K-11, J-10",in text,
+CORE-149,Historical justification separately from the current assessment,"J-10, P-16",in text,
+CORE-150,Independence by actual dependencies,def. 21,in text,
+CORE-151,Negative results are not suppressed; withholding details — limited,"K-12, T-9, P-13",in text,
+CORE-152,Evidentiary value and disclosure risk separately,"def. 15, P-13",in text,
+CORE-153,Prohibition of retaliation for good-faith criticism,"K-12, P-2",in text,
+CORE-154,"Protection, not punishment","K-0.12, K-15",in text,
+CORE-155,"Restoration does not require trust, forgiveness, admission",P-10,in text,fixed during reconciliation with the GPT history export
+CORE-156,"Repetition is a reason for thorough review, not evidence",P-18,in text,fixed during reconciliation with the GPT history export
+CORE-157,Notice of a measure as early as possible,"P-5, E-7",in text,

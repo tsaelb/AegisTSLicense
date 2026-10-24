@@ -6,16 +6,33 @@
 
 ## Состав / Contents
 
+Каждый документ и каждое приложение есть на двух языках. / Every document and every appendix exists in both languages.
+
+| Русский | English | Что это / What it is |
+|---|---|---|
+| `AEGIS_License_RU.md` | `AEGIS_License_EN.md` | текст лицензии / the License text |
+| `AEGIS_призыв_к_независимой_проверке.md` | `AEGIS_call_for_independent_review.md` | призыв к независимой проверке / call for independent review |
+| `AEGIS_CORE_прослеживаемость.csv` | `AEGIS_CORE_traceability.csv` | прослеживаемость требований / traceability |
+| `AEGIS_стресс_тесты_повторно.csv` | `AEGIS_stress_tests.csv` | стресс-тесты / stress tests |
+| `AEGIS_допущения_моделей.csv` | `AEGIS_model_assumptions.csv` | допущения моделей / model assumptions |
+| `AEGIS_приложение_модель_проверки.py` | `AEGIS_appendix_A_review_model.py` | Приложение А / Appendix A |
+| `AEGIS_приложение_модели_управления.py` | `AEGIS_appendix_B_governance_models.py` | Приложение Б / Appendix B |
+| `AEGIS_приложение_модель_чрезвычайных_мер.py` | `AEGIS_appendix_C_emergency_measures.py` | Приложение В / Appendix C |
+| `AEGIS_приложение_хеш_ядра.py` | `AEGIS_appendix_D_core_hash.py` | Приложение Г / Appendix D |
+| `AEGIS_приложение_суд_и_процедура.py` | `AEGIS_appendix_E_courts_and_procedure.py` | Приложение Д / Appendix E |
+| `AEGIS_приложение_ключи_жребий_роли.py` | `AEGIS_appendix_F_keys_lots_roles.py` | Приложение Е / Appendix F |
+| `AEGIS_приложение_пороги_и_параметры.py` | `AEGIS_appendix_G_thresholds_and_parameters.py` | Приложение Ж / Appendix G |
+| `AEGIS_приложение_эталон_проверки.py` | `AEGIS_appendix_H_reference_verification.py` | Приложение З / Appendix H |
+
+Обе версии каждого приложения вычисляют одни и те же числа; `tools/check_all.py` проверяет это автоматически. / Both versions of each appendix compute the same numbers; `tools/check_all.py` checks this automatically.
+
 | Файл / File | Что это / What it is |
 |---|---|
-| `AEGIS_License_RU.md`, `AEGIS_License_EN.md` | текст лицензии: ядро, изменяемая часть, приложения, пояснение простым языком / the License text |
-| `AEGIS_приложение_*.py` | приложения А–З: модели, доказательства, эталонная реализация / Appendices A–H |
-| `AEGIS_CORE_прослеживаемость.csv`, `AEGIS_стресс_тесты_повторно.csv`, `AEGIS_допущения_моделей.csv` | прослеживаемость требований, стресс-тесты, допущения моделей / traceability, stress tests, model assumptions |
-| `AEGIS_призыв_к_независимой_проверке.md` | как проверить и сообщить о находке / call for independent review |
-| `CORE-ID.txt` | полный идентификатор ядра (SHA-512 + SHA3-512) / full Core identifier |
+| `README.md`, `CORE-ID.txt`, `LICENSES/LicenseRef-AEGIS-Draft.txt` | двуязычные / bilingual |
 | `SHA512SUMS`, `SHA3-512SUMS` | манифест всех файлов / manifest of all files |
 | `*.asc`, `*.mldsa65.sig`, `*.ots`, `keys/` | подписи, отметки времени, открытые ключи / signatures, timestamps, public keys |
-| `tools/` | проверка пакета, манифест, постквантовая подпись / package check, manifest, post-quantum signature |
+| `editions/<тег>/` | манифесты, подписи и отметки прежних редакций — остаются проверяемыми / manifests, signatures and timestamps of earlier editions — remain verifiable |
+| `tools/` | проверка пакета, манифест, постквантовая подпись (описание на двух языках) / package check, manifest, post-quantum signature (bilingual descriptions) |
 
 ## Проверка / Verification
 

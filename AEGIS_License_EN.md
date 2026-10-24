@@ -517,16 +517,16 @@ The signs of violation are examples and do not exhaust a prohibition. The cases 
 
 # PART III. APPENDICES
 
-*Variable Part. The code of the appendices is published under this License; anyone may run it and check the results.*
+*Variable Part. The code of the appendices is published under this License; anyone may run it and check the results. Each appendix is published in Russian and English; both versions compute the same numbers, and this is checked automatically. The tables of traceability, stress tests and assumptions and the call for independent review are also published in both languages.*
 
-- **Appendix A.** Independent review model: choice of the number of reviewers and the threshold, Monte Carlo self-check, robust choice of parameters (`AEGIS_приложение_модель_проверки.py`).
-- **Appendix B.** Models of peer decisions, fake pseudonyms and admission to vote, the treasury, t-of-n signing and distribution channels (`AEGIS_приложение_модели_управления.py`).
-- **Appendix C.** Emergency measures model: exhaustive bounded check and machine proof of the inductive invariant (`AEGIS_приложение_модель_чрезвычайных_мер.py`).
-- **Appendix D.** Canonical form and hash of the Core, with self-check (`AEGIS_приложение_хеш_ядра.py`).
-- **Appendix E.** Courts and Project procedure: machine check of the consistency of rules J-6 – J-9 with the Core and comparison of rules for divergent decisions (`AEGIS_приложение_суд_и_процедура.py`).
-- **Appendix F.** Keys, lots, separation of roles, status freshness and case records: proof of uniqueness of continuation, key deadlock check, lot bias model, probabilities of role combination and rollback, check of rule P-13 (`AEGIS_приложение_ключи_жребий_роли.py`).
-- **Appendix G.** Thresholds and parameters: number of voters, the R-7 sample, the share of ties in a panel, the class 3 quorum, treasury signing, treasury reserve, number of people for separation of roles, hash strength as the computing power of humanity and AI grows, sensitivity of J-9, the order of choice in K-0.14, the number of reviewers before release (`AEGIS_приложение_пороги_и_параметры.py`).
-- **Appendix H.** Reference implementation of the checks of the system of trust — dual signatures, user verification of a release, key change and recovery, revocation, case records, lots — with tests of attacks and mutation testing of the tests themselves (`AEGIS_приложение_эталон_проверки.py`).
+- **Appendix A.** Independent review model: choice of the number of reviewers and the threshold, Monte Carlo self-check, robust choice of parameters (`AEGIS_appendix_A_review_model.py`; Russian version — `AEGIS_приложение_модель_проверки.py`).
+- **Appendix B.** Models of peer decisions, fake pseudonyms and admission to vote, the treasury, t-of-n signing and distribution channels (`AEGIS_appendix_B_governance_models.py`; Russian version — `AEGIS_приложение_модели_управления.py`).
+- **Appendix C.** Emergency measures model: exhaustive bounded check and machine proof of the inductive invariant (`AEGIS_appendix_C_emergency_measures.py`; Russian version — `AEGIS_приложение_модель_чрезвычайных_мер.py`).
+- **Appendix D.** Canonical form and hash of the Core, with self-check (`AEGIS_appendix_D_core_hash.py`; Russian version — `AEGIS_приложение_хеш_ядра.py`).
+- **Appendix E.** Courts and Project procedure: machine check of the consistency of rules J-6 – J-9 with the Core and comparison of rules for divergent decisions (`AEGIS_appendix_E_courts_and_procedure.py`; Russian version — `AEGIS_приложение_суд_и_процедура.py`).
+- **Appendix F.** Keys, lots, separation of roles, status freshness and case records: proof of uniqueness of continuation, key deadlock check, lot bias model, probabilities of role combination and rollback, check of rule P-13 (`AEGIS_appendix_F_keys_lots_roles.py`; Russian version — `AEGIS_приложение_ключи_жребий_роли.py`).
+- **Appendix G.** Thresholds and parameters: number of voters, the R-7 sample, the share of ties in a panel, the class 3 quorum, treasury signing, treasury reserve, number of people for separation of roles, hash strength as the computing power of humanity and AI grows, sensitivity of J-9, the order of choice in K-0.14, the number of reviewers before release (`AEGIS_appendix_G_thresholds_and_parameters.py`; Russian version — `AEGIS_приложение_пороги_и_параметры.py`).
+- **Appendix H.** Reference implementation of the checks of the system of trust — dual signatures, user verification of a release, key change and recovery, revocation, case records, lots — with tests of attacks and mutation testing of the tests themselves (`AEGIS_appendix_H_reference_verification.py`; Russian version — `AEGIS_приложение_эталон_проверки.py`).
 
 The models prove properties only within their assumptions, listed in each file, and are not a claim of security or infallibility.
 

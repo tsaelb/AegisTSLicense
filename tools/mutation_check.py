@@ -1,4 +1,5 @@
-"""Мутационная проверка испытаний Приложения З: каждая ослабленная версия правил должна провалить хотя бы одно испытание."""
+"""Мутационная проверка испытаний Приложения З: каждая ослабленная версия правил должна провалить хотя бы одно испытание.
+EN: mutation testing of the tests of Appendix H: every weakened version of the rules must fail at least one test."""
 import subprocess, sys, os, tempfile
 src = open(sys.argv[1], encoding="utf-8").read()
 M = {

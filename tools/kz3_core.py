@@ -1,7 +1,10 @@
 """Z3: непротиворечивость ядра AEGIS (текущая редакция) — для каждой допустимой ситуации существует набор действий,
 удовлетворяющий всем положениям. Проверка квантором: ∃обстоятельства ∀действия ¬(ядро). Найденные противоречия
 перечисляются с ядром противоречия (минимальным набором положений). Перевод положений в формулы сделан составителем
-и сам требует проверки (K-10)."""
+и сам требует проверки (K-10).
+EN: Z3 consistency of the AEGIS Core — for every admissible situation there is a set of actions satisfying all provisions
+(quantified check ∃circumstances ∀actions ¬Core), with sensitivity controls. The translation of provisions into formulas
+was made by the drafter and itself requires review (K-10). Rule names are in Russian."""
 import sys, z3
 
 F = ["f_vuln_known", "f_disclosure_risky", "f_ongoing_proven", "f_decision_affects", "f_evidence_secret",

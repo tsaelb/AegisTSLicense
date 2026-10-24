@@ -1,0 +1,31 @@
+﻿Appendix,Conclusion in the text,Assumption,Adopted value,Status of the value,How to measure,At what value the conclusion stops being true,Margin
+A,"P-3b: n=79, k=51",Share of dishonest reviewers in the pool q (always vote wrongly),0.05–0.20 (base 0.10),"assumption; cannot be measured, only bounded from above","P-16: blind audit, latent class model","false ""proven"" > 10⁻³ at q ≥ 0.39 (for the former 29/18 — 0.245)",≈3.9× the base
+A,P-3b,Correlation of honest reviewers' errors ρ,0.03–0.20,assumption,P-16: estimate of correlation,"false ""proven"" > 10⁻³ at ρ ≥ 0.143 (for 29/18 — 0.106); at ρ=0.20 the worst case ≈1.2·10⁻² for almost any n",2.9× the base 0.05; a larger panel does not remove it — independence is needed
+A,P-3b,"Honest reviewer's error ""violation where there is none"" e",0.03–0.08,assumption,P-16,> 10⁻³ at e ≥ 0.213 (for 29/18 — 0.129),≈4.3×
+A,P-3b,Honest reviewer's miss m,0.05–0.15,assumption,P-16,the scheme's miss rate > 0.10 at m ≥ 0.159 (for 29/18 — 0.167): a higher threshold slightly increases misses,≈1.6×
+A,P-15,At least one dishonest reviewer in a small panel,rounding up,conservative assumption,—,—,—
+B,"R-3: ""for"" > 50% and ≥ 20% of all",Accuracy of an honest voter p; block b,p=0.7; b up to 0.10,"theorem for V→∞, ρ=0; finite model — computation",share of decisions reversed on reconsideration,the threshold window is empty at b ≥ (2p−1)/(2p); at b=0.10 p > 0.556 is needed,p: 0.7 against 0.556
+B,R-6/R-7: level 1 (24/1/4),Deception of a voucher f; adversary's budget β,f ≤ 0.3; β ≤ 0.10,assumption,"R-7: reconfirmation of a sample, share of deceived vouchers","share of fakes > 5% at f ≥ 0.356 (β=0.10), 0.433 (β=0.05), 0.558 (β=0.02)",f: ≈1.2× at β=0.10
+B,R-6/R-7,"Activity of honest participants a ~ Beta(2,3)",mean 0.4,assumption,open history of contributions,"affects the share of excluded honest participants, not the share of fakes",—
+B,B-1: 9 of 17 (robust choice),Key compromise per year c; common cause ρ; loss l; weight of the number of people,c=0.01; ρ=0.02; l=0.05,"assumption (hardware keys from different manufacturers, different jurisdictions)",log of key incidents,forgery > 10⁻⁴ at c ≥ 0.080 or ρ ≥ 0.078; unavailability > 10⁻³ at l ≥ 0.130 (for the former scheme 4 of 7: 0.020; 0.036; 0.054),"c 8×, ρ 3.9×, l 2.6×"
+B,"B-3, B-8: 6 channels, 2 of 4",Channel unavailability f=0.10; common cause ρc; share of dishonest b,ρc 0.1–0.3; b=0.10,assumption,log of channel availability,risk from people > 10⁻⁶ at b ≥ 0.22; infrastructure risk is determined by ρc,for people 2.2×; for infrastructure small
+B,"J-11, B-3",Share of channels under restriction s and coordination ρ,0.1–0.3; 0.2–0.7,scenarios,observed blocking,with hard blocs up to 15% of countries without official channels,none — acknowledged
+B,"M-4: 10%, reserve 12 months",Departure of a source per year l; common cause ρ; mandatory expenses 30%,l=0.2; ρ=0.05,assumption,history of receipts,risk > 1% at l ≥ 0.31 (ρ=0.05) or ρ ≥ 0.14 (l=0.2) for the 10% limit; with the former 15% the target was violated already in the base scenario (1.4%),l 1.5×; ρ 2.7×
+B,L-9,Probability of proof P; period D; duration of a lawsuit μ,P=0.97; D=3 months; μ 6–24 months,assumption,observed case durations,strength < 50% of automatic termination at μ < 4.5 months,—
+C,E-4: ≤ 30 days,A situation is tied to one incident (E-2),—,proven by induction for any length under this assumption,—,"if re-declaration as a new incident is not cut off by P-3a, the property is not guaranteed",—
+D,B-7,Strength of SHA-512 and SHA3-512 (different constructions),—,generally accepted cryptographic assumption,—,a practical attack on both functions before renewal,two independent algorithms
+E,J-9: follow Section 7,"Court errors c1, c2; independence from Section 7",c1 0.01–0.10; c2 0.10–0.30,assumption,comparison of decisions,re-review is better only if a false restriction is worse than a miss by more than 24774 times,large
+F,B-1/B-11: uniqueness,t > n/2,9 of 17,"proven (Z3, all subsets)",—,at t ≤ n/2,—
+F,B-12,The external value is unpredictable and not controlled by a participant before the reveal deadline,—,assumption about the external source,—,"if a participant influences the external value, the bias returns",—
+F,B-4,Channel compromise c; common cause ρ,0.05–0.10; 0.1–0.3,assumption,log of channels,at ρ=0.3 rollback through a majority — 4.3·10⁻²,small — acknowledged
+F,U-8,Roles are filled by an independent lot,—,model assumption,—,—,—
+Z3 of the Core,0 contradictions,Translation of the text of the Core into formulas,manual,drafter; requires independent review,independent formal translation,"if the translation is wrong, the consistency conclusion is wrong",sensitivity control: the old contradiction K-16/K-18 is detected
+G,F-4: voters no fewer than k+1,Vouchers are assigned from other voters,k = 4 (level 1),logical consequence of R-6,—,—,—
+G,R-7: sample 119 for lowering,Clopper–Pearson bound 95%; 0 findings,2.5% — half of the raising threshold,"hysteresis, not optimization",reconfirmation,—,—
+G,P-17: ties ≤ 5%,Tied reviewers act as one dishonest block; q ≤ 0.15 in the base grid,q + s ≤ 0.20,conservative assumption,disclosure under U-5,at q > 0.15,—
+G,E-5: 9 of 17,Unavailability within the decision window l; capture c; common cause ρ,l 0.2–0.5; c 0.02–0.10,assumption,on-call log,"capture > 10⁻³ at c=0.1, ρ=0.1",—
+G,M-3: treasury 6 of 10,"As B-1, targets: capture 10⁻³, unavailability 10⁻²",—,assumption,treasury log,—,—
+G,M-4: reserve 12 months,Income recovery time is exponential with mean μ,μ ≤ 6 months,assumption,history of receipts,at μ = 12 months 21 months are needed,—
+G,"L-10, B-7: SHA-512 + SHA3-512, renewal","Growth of power: doubling every 2–0.25 years without saturation; Grover, BHT; Landauer limit",today up to 10²¹ hashes/s; a cryptanalytic jump of up to 46 bits,scenarios; the physical limit applies to irreversible computation,—,reversible computation removes the Landauer limit — hence mandatory renewal (RFC 4998),—
+G,J-9: 23 of 24,Errors of the court and of the review are independent,ρ 0.05–0.20; q 0.10–0.20,assumption,comparison of decisions,"ρ=0.2, q=0.2 and a very accurate court",—
+F-5,"Periods of 3, 7, 14, 30, 60, 90 days",Not derived from a model,provisional initial values,provisional value; T-9: 90 days is an industry norm (Google Project Zero),accumulated data (P-14),—,—

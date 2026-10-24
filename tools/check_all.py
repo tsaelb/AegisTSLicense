@@ -1,8 +1,13 @@
-"""Полная проверка пакета AEGIS. Запуск из корня пакета: python3 -I tools/check_all.py
+"""Полная проверка пакета AEGIS / Full check of the AEGIS package. Запуск из корня пакета / run from the package root: python3 -I tools/check_all.py
 1) Структура: число и порядок положений RU/EN, определения, разделы.
 2) Перекрёстные ссылки: каждая ссылка на положение указывает на существующее.
 3) Все приложения запускаются без ошибок; ключевые выводы совпадают с текстом.
 4) Логические модели Z3: ядро (kz3_core), суд и процедура (Приложение Д) — 0 противоречий.
+5) Английские версии приложений дают те же числа; таблицы и призыв есть на обоих языках; мутационная проверка испытаний.
+
+EN: 1) structure of RU/EN texts; 2) cross-references; 3) all appendices run and their key conclusions match the text;
+4) Z3 models of the Core and courts; 5) English appendices give the same numbers as the Russian ones, tables and the call
+exist in both languages, mutation testing of the tests. Messages are printed in Russian.
 """
 import re, subprocess, sys, os
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -64,8 +69,36 @@ if os.path.exists(KZ3):
     variant = "предлагаемый" if "созданная без использования произведений под этой лицензией, ею не связана" in RU else "текущий"
     good, out = run([KZ3, variant], ["Невыполнимых комбинаций: 0", "с правилом 0", "Контроль чувствительности (старая K-18 без исключения должна дать конфликт): обнаружен", "Контроль чувствительности 2 (восстановление при условии извинения должно дать конфликт): обнаружен"])
     report("Z3: непротиворечивость ядра", good, out.strip().splitlines()[-1] if out.strip() else "")
-mut = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mutation_check.py")
+# английские версии приложений: те же числа, что у русских (сверка всех чисел вывода)
+PAIRS = [
+    ("AEGIS_приложение_модель_проверки.py", "AEGIS_appendix_A_review_model.py", ["--quick", "--small"]),
+    ("AEGIS_приложение_модели_управления.py", "AEGIS_appendix_B_governance_models.py", []),
+    ("AEGIS_приложение_модель_чрезвычайных_мер.py", "AEGIS_appendix_C_emergency_measures.py", []),
+    ("AEGIS_приложение_хеш_ядра.py", "AEGIS_appendix_D_core_hash.py", ["--selftest", "AEGIS_License_RU.md", "AEGIS_License_EN.md"]),
+    ("AEGIS_приложение_суд_и_процедура.py", "AEGIS_appendix_E_courts_and_procedure.py", []),
+    ("AEGIS_приложение_ключи_жребий_роли.py", "AEGIS_appendix_F_keys_lots_roles.py", []),
+    ("AEGIS_приложение_пороги_и_параметры.py", "AEGIS_appendix_G_thresholds_and_parameters.py", []),
+    ("AEGIS_приложение_эталон_проверки.py", "AEGIS_appendix_H_reference_verification.py", []),
+]
+HERE_T = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE_T)
+import equiv
+for ru, en, args in PAIRS:
+    good, msg = equiv.compare(os.path.join(OUT, ru), os.path.join(OUT, en), args)
+    report(f"RU/EN приложения {en}: {msg}", good)
+for doc in ("AEGIS_призыв_к_независимой_проверке.md", "AEGIS_call_for_independent_review.md",
+            "AEGIS_CORE_прослеживаемость.csv", "AEGIS_CORE_traceability.csv",
+            "AEGIS_стресс_тесты_повторно.csv", "AEGIS_stress_tests.csv",
+            "AEGIS_допущения_моделей.csv", "AEGIS_model_assumptions.csv"):
+    report(f"есть файл {doc}", os.path.exists(os.path.join(OUT, doc)))
+import csv as _csv
+for ru, en in (("AEGIS_CORE_прослеживаемость.csv", "AEGIS_CORE_traceability.csv"), ("AEGIS_стресс_тесты_повторно.csv", "AEGIS_stress_tests.csv"),
+               ("AEGIS_допущения_моделей.csv", "AEGIS_model_assumptions.csv")):
+    a = list(_csv.reader(open(os.path.join(OUT, ru), encoding="utf-8-sig"))); b = list(_csv.reader(open(os.path.join(OUT, en), encoding="utf-8-sig")))
+    report(f"таблицы {ru} / {en}: строк {len(a)} / {len(b)}, первый столбец совпадает", len(a) == len(b) and (en == "AEGIS_model_assumptions.csv" or [r[0] for r in a[1:]] == [r[0] for r in b[1:]]))
+mut = os.path.join(HERE_T, "mutation_check.py")
 if os.path.exists(mut):
-    good, out = run([mut, os.path.abspath(os.path.join(OUT, "AEGIS_приложение_эталон_проверки.py"))], ["выжило: 0"])
-    report("мутационная проверка испытаний Приложения З", good, out.strip().splitlines()[-1] if out.strip() else "")
+    for f in ("AEGIS_приложение_эталон_проверки.py", "AEGIS_appendix_H_reference_verification.py"):
+        good, out = run([mut, os.path.abspath(os.path.join(OUT, f))], ["выжило: 0"])
+        report(f"мутационная проверка испытаний {f}", good, out.strip().splitlines()[-1] if out.strip() else "")
 print("ИТОГ:", "всё проверено, ошибок нет" if ok else "есть ошибки")

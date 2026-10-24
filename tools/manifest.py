@@ -6,15 +6,19 @@ AEGIS — манифест пакета (В-7): SHA-512 и SHA3-512 каждог
   python3 -I tools/manifest.py check   # сверяет все файлы с обоими манифестами
 
 SHA512SUMS проверяется и стандартной командой: sha512sum -c SHA512SUMS
-Подписи (.asc, .sig), отметки времени (.ots), открытые ключи (keys/) и служебные файлы git в манифест
+Подписи (.asc, .sig), отметки времени (.ots), открытые ключи (keys/), прежние редакции (editions/) и служебные файлы git в манифест
 не входят: они появляются после манифеста и сами его подтверждают.
+
+EN: package manifest (B-7): SHA-512 and SHA3-512 of every file and the full Core identifier.
+  make — writes SHA512SUMS, SHA3-512SUMS, CORE-ID.txt; check — verifies all files against both manifests.
+  Signatures, timestamps, public keys (keys/), earlier editions (editions/) and git files are not in the manifest.
 """
 import hashlib, importlib.util, os, sys
 sys.dont_write_bytecode = True
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFESTS = {"SHA512SUMS": hashlib.sha512, "SHA3-512SUMS": hashlib.sha3_512}
-SKIP_DIRS = {".git", "keys", "__pycache__"}
+SKIP_DIRS = {".git", "keys", "editions", "__pycache__"}
 SKIP_FILES = set(MANIFESTS) | {"CORE-ID.txt"}
 SKIP_SUFFIX = (".sig", ".asc", ".ots", ".bak")
 
